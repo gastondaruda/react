@@ -1,0 +1,37 @@
+const array = [ b, c, d];
+
+const a = array;
+
+        ==
+/*SPREAD OPERATOR*/
+const newArray = [a, ...array]
+
+
+========================================
+/*CAMPOS DINAMICOS*/
+let nombre = "Fede";
+
+const obj = {
+    dni: 123412345,
+    ["id_" + nombre]: "12341234"
+}
+========================================
+
+/*DEEP MATCH*/
+
+
+========================================
+/*DESTRUCTURING*/
+const obj = {
+    nombre: "Fede";
+    apellido: "Osadón"
+}
+
+let nombre = obj.nombre
+let apellido = obj.apellido
+
+        ==
+
+const { nombre, apellido } = obj
+
+console.log(apellido)

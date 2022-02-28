@@ -1,13 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navBar';
 
 function App() {
-  return (
+  return ( 
     <div className="App">
-      <header className="App-header">
+      <Navbar />
+      
+      
+    </div>
+  );
+}
+
+export default App;
+
+
+/*
+<header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Gasty
         </p>
         <a
           className="App-link"
@@ -18,8 +30,4 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
-  );
-}
-
-export default App;
+*/
