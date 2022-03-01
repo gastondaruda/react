@@ -11,7 +11,7 @@ font-family: 'Source Sans Pro', sans-serif;
 
 }
 .nav{
-    background-color: rgb(248, 246, 246);
+    /*background-color: rgb(248, 246, 246);*/
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -20,6 +20,7 @@ font-family: 'Source Sans Pro', sans-serif;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
+    z-index: 100;
 }
 .nav_logo{
     margin-right: -4rem;
@@ -36,7 +37,7 @@ font-family: 'Source Sans Pro', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
 }
 .nav_ul{
-    margin: 0 2rem;
+    margin: 0 1rem;
     font-size: 1.5rem;
 }
 .nav_a:hover{
@@ -46,6 +47,12 @@ font-family: 'Source Sans Pro', sans-serif;
 .nav_a{
     color: rgb(68, 68, 68);
     text-decoration: none;
+}
+.bx-cart{
+    font-size: 4rem;
+    position: relative;
+    margin: auto 1rem;
+    cursor: pointer;
 }
 /*
 .nav_ul::after{
@@ -62,3 +69,13 @@ font-family: 'Source Sans Pro', sans-serif;
     width: 20%;
 }
 */
+
+/*------------------------*/
+.landing_title{
+    position: relative;
+    color: rgb(19, 14, 14);
+    margin: 10rem auto;
+    justify-content: center;
+    display: flex;
+    font-size: 3rem;
+}

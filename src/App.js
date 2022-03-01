@@ -1,13 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navBar';
+import ItemListContainer from './components/ItemListContainer';
+import Imagenes from './components/Imagenes.js';
+
 
 function App() {
+  
   return ( 
     <div className="App">
       <Navbar />
-      
-      
+      <ItemListContainer titulo='Landing Page' />
+      <ItemListContainer titulo='Secundo landing' />
+      <Imagenes />
     </div>
   );
 }
