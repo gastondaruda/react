@@ -6,6 +6,7 @@ import CartWidget from './cartWidget'
 
 
 
+
 const Navbar = () => {
     const style = {backgroundColor: 'rgb(248, 246, 246)'}
     
@@ -16,9 +17,9 @@ const Navbar = () => {
             <CartWidget />
             <h2 className='nav_title'>Momento Dolce Pastelería</h2>
             <li className='nav_li'>
-                <NavbarItem nombre='Landing Page' />
-                <NavbarItem nombre='Productos' />
-                <NavbarItem nombre='¿Quiénes somos?' />
+                <NavbarItem icon="bx bxs-home" nombre='Landing Page' />
+                <NavbarItem icon="bx bxs-store-alt" nombre='Productos' />
+                <NavbarItem icon="bx bxs-group" nombre='¿Quiénes somos?' />
             </li>
         </nav>
     )

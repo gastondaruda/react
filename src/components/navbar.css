@@ -39,11 +39,19 @@ font-family: 'Source Sans Pro', sans-serif;
 .nav_ul{
     margin: 0 1rem;
     font-size: 1.5rem;
+    transition: .5s;
+}
+.nav_ul:hover{
+    color: rgb(8, 207, 8);
+
 }
 .nav_a:hover{
     color: rgb(8, 207, 8);
     cursor: pointer;
 }
+
+ 
+
 .nav_a{
     color: rgb(68, 68, 68);
     text-decoration: none;
@@ -79,3 +87,4 @@ font-family: 'Source Sans Pro', sans-serif;
     display: flex;
     font-size: 3rem;
 }
+

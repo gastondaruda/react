@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
+import './components/itemCount.css';
 import Navbar from './components/navBar';
 import ItemListContainer from './components/ItemListContainer';
-import Imagenes from './components/Imagenes.js';
+import ItemCount from './components/ItemCount';
 
 
 function App() {
@@ -11,8 +11,7 @@ function App() {
     <div className="App">
       <Navbar />
       <ItemListContainer titulo='Landing Page' />
-      <ItemListContainer titulo='Secundo landing' />
-      <Imagenes />
+      <ItemCount />
     </div>
   );
 }
