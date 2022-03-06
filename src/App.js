@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Navbar />
       <ItemListContainer titulo='Landing Page' />
-      <ItemCount />
+      <ItemCount stock={5}/>
     </div>
   );
 }

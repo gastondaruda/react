@@ -1,7 +1,7 @@
 import {useState, setCount} from "react"
 import './itemCount.css'
 
-function ItemCount({stock="5", initial="1"}) {
+function ItemCount({stock, initial="1"}) {
     const [ count, setCount ] = useState(0)// devuelve un array
      //let count = 0;
 
