@@ -1,8 +1,8 @@
 import {useState, setCount} from "react"
 import './itemCount.css'
 
-function ItemCount({stock, initial="1"}) {
-    const [ count, setCount ] = useState(0)// devuelve un array
+function ItemCount({stock, initial=1}) {
+    const [ count, setCount ] = useState(initial)// devuelve un array
      //let count = 0;
 
     const handleCount = () => {
@@ -10,7 +10,9 @@ function ItemCount({stock, initial="1"}) {
         if(count < stock){
             setCount( count + 1)
             console.log(count)
-        }else {
+        
+        }
+        else {
             alert("Superaste el stock")
         }
     }

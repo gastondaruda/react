@@ -1,6 +1,7 @@
 import './App.css';
 import './components/itemCount.css';
-import Navbar from './components/navBar';
+import './components/itemCard.css'
+import Navbar from './components/Navbar/navBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
 
@@ -11,7 +12,6 @@ function App() {
     <div className="App">
       <Navbar />
       <ItemListContainer titulo='Landing Page' />
-      <ItemCount stock={5}/>
     </div>
   );
 }

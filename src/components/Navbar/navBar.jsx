@@ -1,8 +1,8 @@
 import React from 'react'
 import './navbar.css'
-import logo from '../assets/imagenes/logo.png'
+import logo from '../../assets/imagenes/logo.png'
 import NavbarItem from './navbarItem' 
-import CartWidget from './cartWidget'
+import CartWidget from '../cartWidget'
 
 
 
