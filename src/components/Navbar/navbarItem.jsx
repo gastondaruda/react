@@ -1,6 +1,6 @@
 const NavbarItem = ({nombre, icon}) => {
     return (
-        <ul className='nav_ul'><i class={icon}></i><a className='nav_a'>{nombre}</a></ul>
+        <ul className='nav_ul'><i class={icon}></i><a className='nav_a' alt="#">{nombre}</a></ul>
     )
 }
 

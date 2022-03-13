@@ -19,7 +19,7 @@ const Navbar = () => {
             <li className='nav_li'>
                 <NavbarItem icon="bx bxs-home" nombre='Landing Page' />
                 <NavbarItem icon="bx bxs-store-alt" nombre='Productos' />
-                <NavbarItem icon="bx bxs-group" nombre='¿Quiénes somos?' />
+                <NavbarItem icon="bx bxs-group" nombre='Api resetas' />
             </li>
         </nav>
     )

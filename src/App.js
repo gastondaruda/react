@@ -3,7 +3,7 @@ import './components/itemCount.css';
 import './components/itemCard.css'
 import Navbar from './components/Navbar/navBar';
 import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
+
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   return ( 
     <div className="App">
       <Navbar />
-      <ItemListContainer titulo='Landing Page' />
+      <ItemListContainer titulo='Soy itemListContainer' />
     </div>
   );
 }
