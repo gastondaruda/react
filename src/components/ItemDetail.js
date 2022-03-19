@@ -1,13 +1,15 @@
-import { getFetch } from "../helpers/getFetch"
+import ItemCount from './ItemCount';
 
-
-function ItemDetail({prod}) {
+function ItemDetail({producto}) {
   
     return (
       <div className="itemDetail">
-            <img src={prod.url} alt = 'imagen' />
-            <p className=''>{prod.nombre}</p>
-            <h1>No funciona del todo</h1>
+            <img className="image-detail" src={producto.url} alt = 'imagen' />
+            <div className="detail-flex">
+              <p className='p-detail'>{producto.nombre}</p>
+              <p className="text-detail">lorem lorem lorem lorem lorem</p>
+              <ItemCount stock={producto.stock} />
+            </div>
       </div>
     )
   }

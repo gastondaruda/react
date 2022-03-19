@@ -23,18 +23,18 @@ import img12 from '../assets/imagenes/IMG_12.jpg'
 import img12h from '../assets/imagenes/IMG_12h.jpg'
 
 const productos = [
-    {id:1, nombre: 'Torta 1', description: 'Untipazo', stock: 5 , url: img1, url2: img1h},
-    {id:2, nombre: 'Torta 2', description: 'Untipazo', stock: 7 , url: img2, url2: img2h},
-    {id:3, nombre: 'Torta 3', description: 'Untipazo', stock: 10 , url: img3, url2: img3h},
-    {id:4, nombre: 'Torta 4', description: 'Untipazo', stock: 2 , url: img4, url2: img4h},
-    {id:5, nombre: 'Torta 5', description: 'Untipazo', stock: 4 , url: img5, url2: img5h},
-    {id:6, nombre: 'Torta 6', description: 'Untipazo', stock: 4 , url: img6, url2: img6h},
-    {id:7, nombre: 'Torta 7', description: 'Untipazo', stock: 4 , url: img7, url2: img7h},
-    {id:8, nombre: 'Torta 8', description: 'Untipazo', stock: 4 , url: img8, url2: img8h},
-    {id:9, nombre: 'Torta 9', description: 'Untipazo', stock: 4 , url: img9, url2: img9h},
-    {id:10, nombre: 'Torta 10', description: 'Untipazo', stock: 4 , url: img10, url2: img10},
-    {id:11, nombre: 'Torta 11', description: 'Untipazo', stock: 4 , url: img11, url2: img11h},
-    {id:12, nombre: 'Torta 12', description: 'Untipazo', stock: 4 , url: img12, url2: img12h}
+    {id:'Torta 1', nombre: 'Torta 1', precio: 1500, description: 'Untipazo', stock: 5 , url: img1, url2: img1h},
+    {id:'Torta 2', nombre: 'Torta 2', precio: 1500, description: 'Untipazo', stock: 7 , url: img2, url2: img2h},
+    {id:'Torta 3', nombre: 'Torta 3', precio: 1500, description: 'Untipazo', stock: 10 , url: img3, url2: img3h},
+    {id:'Torta 4', nombre: 'Torta 4', precio: 1500, description: 'Untipazo', stock: 2 , url: img4, url2: img4h},
+    {id:'Torta 5', nombre: 'Torta 5', precio: 1500, description: 'Untipazo', stock: 4 , url: img5, url2: img5h},
+    {id:'Torta 6', nombre: 'Torta 6', precio: 1500, description: 'Untipazo', stock: 4 , url: img6, url2: img6h},
+    {id:'Torta 7', nombre: 'Torta 7', precio: 1500, description: 'Untipazo', stock: 4 , url: img7, url2: img7h},
+    {id:'Torta 8', nombre: 'Torta 8', precio: 1500, description: 'Untipazo', stock: 4 , url: img8, url2: img8h},
+    {id:'Torta 9', nombre: 'Torta 9', precio: 1500, description: 'Untipazo', stock: 4 , url: img9, url2: img9h},
+    {id:'Torta 10', nombre: 'Torta 10', precio: 1500, description: 'Untipazo', stock: 4 , url: img10, url2: img10},
+    {id:'Torta 11', nombre: 'Torta 11', precio: 1500, description: 'Untipazo', stock: 4 , url: img11, url2: img11h},
+    {id:'Torta 12', nombre: 'Torta 12', precio: 1500, description: 'Untipazo', stock: 4 , url: img12, url2: img12h}
 ]
 
 export const getFetch = new Promise((resolve, reject)=> {

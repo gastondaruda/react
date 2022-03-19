@@ -3,12 +3,13 @@ import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import Navbar from './components/Navbar/navBar.jsx';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContianer from './components/ItemDetailContainer';
+import Carrito from './components/Carrito';
 import './components/Navbar/scroll';
+import Api from './components/Api';
 import './components/itemCard.css';
 import './components/itemCount.css';
 import './components/font.css'
-import Carrito from './components/Carrito';
-import Api from './components/Api';
+import './components/ItemDetail';
 
 
 function App() {

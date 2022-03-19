@@ -16,8 +16,8 @@ const Navbar = () => {
         <nav className='nav' id="navbar">
             <img src={logo} className="nav_logo" alt="logo" />
             <CartWidget />
-            <h2 className='nav_title a' id='title'>Momento Dolce Pastelería</h2>
-            <li className='nav_li'>
+            <h2 className='nav_title questrial' id='title'>Momento Dolce Pastelería</h2>
+            <li className='nav_li lato'>
                 <Link to="/">
                     <NavbarItem icon="bx bxs-home" nombre='Landing Page' />
                 </Link>

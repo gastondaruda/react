@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import ItemCount from './ItemCount';
+
 
 const Item = ({prod}) => {
     return (
@@ -10,10 +10,12 @@ const Item = ({prod}) => {
                         <img className='card-image' src={prod.url} alt=""></img>
                         <img className='card-image-hover' src={prod.url2} alt=""></img>
                     </div>
-                    <h3 className='card-title' >{prod.nombre}</h3>
-                    <ItemCount stock={prod.stock} />
-                    <Link className='link' to={`detalle/${prod.id}`} >
-                        <button className='div-detail'>Detalle</button>
+                    <div className='title-flex'>
+                        <h3 className='card-title lora' >{prod.nombre}</h3>
+                        <h3 className='card-precio questrial'>${prod.precio}</h3> 
+                    </div>
+                    <Link to={`detalle/${prod.id}`} >
+                        <a href='#' className='div-detail questrial'>Comprar</a>
                     </Link>
                 </div>
                 

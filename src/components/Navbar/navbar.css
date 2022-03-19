@@ -7,7 +7,9 @@ font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    text-decoration: none;
+    text-decoration-color: none;
+    box-shadow: none;
 }
 .nav{
     /*background-color: rgb(248, 246, 246);*/
