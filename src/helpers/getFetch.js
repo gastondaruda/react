@@ -1,9 +1,40 @@
+import img1 from '../assets/imagenes/IMG_1.jpg'
+import img1h from '../assets/imagenes/IMG_1h.jpg'
+import img2 from '../assets/imagenes/IMG_2.jpg'
+import img2h from '../assets/imagenes/IMG_2h.jpg'
+import img3 from '../assets/imagenes/IMG_3.jpg'
+import img3h from '../assets/imagenes/IMG_3h.jpg'
+import img4 from '../assets/imagenes/IMG_4.jpg'
+import img4h from '../assets/imagenes/IMG_4h.jpg'
+import img5 from '../assets/imagenes/IMG_5.jpg'
+import img5h from '../assets/imagenes/IMG_5h.jpg'
+import img6 from '../assets/imagenes/IMG_6.jpg'
+import img6h from '../assets/imagenes/IMG_6h.jpg'
+import img7 from '../assets/imagenes/IMG_7.jpg'
+import img7h from '../assets/imagenes/IMG_7h.jpg'
+import img8 from '../assets/imagenes/IMG_8.jpg'
+import img8h from '../assets/imagenes/IMG_8h.jpg'
+import img9 from '../assets/imagenes/IMG_9.jpg'
+import img9h from '../assets/imagenes/IMG_9h.jpg'
+import img10 from '../assets/imagenes/IMG_10.jpg'
+import img11 from '../assets/imagenes/IMG_11.jpg'
+import img11h from '../assets/imagenes/IMG_11h.jpg'
+import img12 from '../assets/imagenes/IMG_12.jpg'
+import img12h from '../assets/imagenes/IMG_12h.jpg'
+
 const productos = [
-    {id:1, nombre: 'Torta 1', description: 'Untipazo', stock: 5 , url: 'https://vadetartas.com/wp-content/uploads/2021/06/receta-torta-golosinera.png'},
-    {id:2, nombre: 'Torta 2', description: 'Untipazo', stock: 7 , url: 'https://annaspasteleria.com/images/_imageBlock/DSC_3586web.jpg'},
-    {id:3, nombre: 'Torta 3', description: 'Untipazo', stock: 10 , url: 'https://images.aws.nestle.recipes/original/e89d19d331ac413811e3b1c11a893991_torta-princesa.jpg'},
-    {id:4, nombre: 'Torta 4', description: 'Untipazo', stock: 2 , url: '../assets/imagenes/IMG_1.jpg'},
-    {id:5, nombre: 'Torta 5', description: 'Untipazo', stock: 4 , url: 'img.jpg'}
+    {id:1, nombre: 'Torta 1', description: 'Untipazo', stock: 5 , url: img1, url2: img1h},
+    {id:2, nombre: 'Torta 2', description: 'Untipazo', stock: 7 , url: img2, url2: img2h},
+    {id:3, nombre: 'Torta 3', description: 'Untipazo', stock: 10 , url: img3, url2: img3h},
+    {id:4, nombre: 'Torta 4', description: 'Untipazo', stock: 2 , url: img4, url2: img4h},
+    {id:5, nombre: 'Torta 5', description: 'Untipazo', stock: 4 , url: img5, url2: img5h},
+    {id:6, nombre: 'Torta 6', description: 'Untipazo', stock: 4 , url: img6, url2: img6h},
+    {id:7, nombre: 'Torta 7', description: 'Untipazo', stock: 4 , url: img7, url2: img7h},
+    {id:8, nombre: 'Torta 8', description: 'Untipazo', stock: 4 , url: img8, url2: img8h},
+    {id:9, nombre: 'Torta 9', description: 'Untipazo', stock: 4 , url: img9, url2: img9h},
+    {id:10, nombre: 'Torta 10', description: 'Untipazo', stock: 4 , url: img10, url2: img10},
+    {id:11, nombre: 'Torta 11', description: 'Untipazo', stock: 4 , url: img11, url2: img11h},
+    {id:12, nombre: 'Torta 12', description: 'Untipazo', stock: 4 , url: img12, url2: img12h}
 ]
 
 export const getFetch = new Promise((resolve, reject)=> {

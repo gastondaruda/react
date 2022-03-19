@@ -1,18 +1,39 @@
 import './App.css';
-import './components/itemCount.css';
-import './components/itemCard.css'
-import Navbar from './components/Navbar/navBar';
+import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import Navbar from './components/Navbar/navBar.jsx';
 import ItemListContainer from './components/ItemListContainer';
-
+import ItemDetailContianer from './components/ItemDetailContainer';
+import './components/Navbar/scroll';
+import './components/itemCard.css';
+import './components/itemCount.css';
+import './components/font.css'
+import Carrito from './components/Carrito';
+import Api from './components/Api';
 
 
 function App() {
   
   return ( 
+    <BrowserRouter>
     <div className="App">
       <Navbar />
-      <ItemListContainer titulo='Soy itemListContainer' />
+
+      <Routes>
+
+        <Route path="/" element={<ItemListContainer titulo='Soy itemListContainer' />}/>
+        <Route path="/detalle/:Id" element={<ItemDetailContianer />} />
+
+        <Route path="/detalle" element={<ItemDetailContianer />} />
+        <Route path="/carrito" element={<Carrito/> }  />
+        <Route path="/api" element={<Api />} />
+
+        <Route path="/*" element={<Navigate to="/" />} />
+
+        
+        
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 

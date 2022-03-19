@@ -3,23 +3,31 @@ import './navbar.css'
 import logo from '../../assets/imagenes/logo.png'
 import NavbarItem from './navbarItem' 
 import CartWidget from '../cartWidget'
+import { NavLink, Link } from 'react-router-dom'
+import Carrito from '../Carrito'
 
 
 
 
 const Navbar = () => {
-    const style = {backgroundColor: 'rgb(248, 246, 246)'}
     
 
     return (
-        <nav className='nav' style={style}>
+        <nav className='nav' id="navbar">
             <img src={logo} className="nav_logo" alt="logo" />
             <CartWidget />
-            <h2 className='nav_title'>Momento Dolce Pastelería</h2>
+            <h2 className='nav_title a' id='title'>Momento Dolce Pastelería</h2>
             <li className='nav_li'>
-                <NavbarItem icon="bx bxs-home" nombre='Landing Page' />
-                <NavbarItem icon="bx bxs-store-alt" nombre='Productos' />
-                <NavbarItem icon="bx bxs-group" nombre='Api resetas' />
+                <Link to="/">
+                    <NavbarItem icon="bx bxs-home" nombre='Landing Page' />
+                </Link>
+                <Link to="carrito">
+                    <NavbarItem icon="bx bxs-store-alt" nombre='Carrito' />
+
+                </Link>
+                <Link to="api">
+                    <NavbarItem icon="bx bxs-group" nombre='Api resetas' />
+                </Link>
             </li>
         </nav>
     )

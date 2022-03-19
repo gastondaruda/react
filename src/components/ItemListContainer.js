@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import {getFetch} from '../helpers/getFetch'
 import ItemList from './ItemList';
+import bg from '../assets/imagenes/bg2.jpg';
 
 
 
@@ -19,13 +20,13 @@ function ItemListContainer ({titulo}) {
 
     return (
         <>
-            <h3 className="landing_title">{titulo}</h3>
+            <img className='img' src={bg} alt=""></img>
             <div className="cards">
                 { loading ? <div className='container'>
                     <div className='loader'></div>
                     <p className='message'>Cargando </p>
                 </div> : 
-                <ItemList prods={prods} /> 
+                <ItemList prods={prods}/> 
             }
             </div>
         </>
