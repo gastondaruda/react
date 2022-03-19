@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
-import { getFetch } from "../helpers/getFetch"
+import {getFetchOne } from "../helpers/getFetch"
 
 
 
 function ItemDetailContainer () {
-    const [prod, setProds ] = useState([]);
-    const { Id } = useParams ()
-
+    const [prod, setProducto] = useState({})
     const [loading, setLoading] = useState(true);
-        
-    useEffect(()=> {        
-        getFetch.then(resp => setProds(resp))
+
+    const { Id } = useParams() 
+    
+    useEffect(()=>{
+        getFetchOne
+        .then(prod => prod.find(item => item.id === Id))
+        .then(prod => setProducto(prod))
         .catch(err => console.log(err))
+        
         .finally(() => setLoading(false))
     }, [])
+
     
     return (
         <div>
@@ -23,8 +27,8 @@ function ItemDetailContainer () {
                     <div className='loader'></div>
                     <p className='message'>Cargando </p>
                 </div> : 
-                <ItemDetail prod={prod}/> 
-            }     
+            <ItemDetail prod={prod}/> 
+            }
         </div>
     )
 }

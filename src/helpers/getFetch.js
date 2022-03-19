@@ -48,3 +48,19 @@ export const getFetch = new Promise((resolve, reject)=> {
     }
 })
 
+
+
+const prod = {id:1, nombre: 'Torta 1', description: 'Untipazo', stock: 5 , url: img1, url2: img1h}
+
+export const getFetchOne = new Promise((resolve, reject)=>{
+    //acciones 
+    let condition = true
+    if (condition) {
+        setTimeout(() => {
+            resolve(prod)                    
+        }, 3000);
+    } else {
+        reject('400 - not found')        
+    }
+})
+
