@@ -16,8 +16,9 @@ font-family: 'Source Sans Pro', sans-serif;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 4rem;
+    height: 3rem;
     width: 100%;
+    background-color: #eee;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
@@ -25,7 +26,7 @@ font-family: 'Source Sans Pro', sans-serif;
 }
 .nav_logo{
     margin-right: -4rem;
-    width: 5rem;
+    width: 3rem;
 }
 .nav_title{
     font-size: 1.8rem;
@@ -41,7 +42,6 @@ font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
 }
 .nav_ul:hover{
-    color: rgb(8, 207, 8);
 
 }
 .nav_a:hover{
@@ -52,11 +52,11 @@ font-family: 'Source Sans Pro', sans-serif;
  
 
 .nav_a{
-    color: #eee;
+    color: #000;
     text-decoration: none;
 }
 .bx-cart{
-    font-size: 4rem;
+    font-size: 3rem;
     position: relative;
     margin: auto 1rem;
     cursor: pointer;
@@ -93,3 +93,29 @@ font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*------------------------*/
+.divCategoria{
+    display: none;
+}
+
+.active{
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #eee;
+    border-radius: 0 0 10px 10px;
+    width: 8rem;
+    top: 3rem;
+    margin-left: -3.5rem;
+    transition: .2s;
+}
+
+
+.subCategory-a{
+    color: #000;
+    transition: .3s;
+    margin: .5rem auto;
+    font-weight: 600;
+}
+.subCategory-a:hover{
+    color: rgb(8, 207, 8);
+}

@@ -4,12 +4,12 @@ import Navbar from './components/Navbar/navBar.jsx';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContianer from './components/ItemDetailContainer';
 import Carrito from './components/Carrito';
+import './components/ItemDetail';
 import './components/Navbar/scroll';
 import Api from './components/Api';
 import './components/itemCard.css';
 import './components/itemCount.css';
 import './components/font.css'
-import './components/ItemDetail';
 
 
 function App() {
@@ -22,9 +22,11 @@ function App() {
       <Routes>
 
         <Route path="/" element={<ItemListContainer titulo='Soy itemListContainer' />}/>
+
+        <Route path="/categoria/:id" element={<ItemListContainer />}/>
+        
         <Route path="/detalle/:Id" element={<ItemDetailContianer />} />
 
-        <Route path="/detalle" element={<ItemDetailContianer />} />
         <Route path="/carrito" element={<Carrito/> }  />
         <Route path="/api" element={<Api />} />
 

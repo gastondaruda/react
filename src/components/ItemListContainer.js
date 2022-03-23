@@ -10,12 +10,19 @@ import bg from '../assets/imagenes/bg2.jpg';
 function ItemListContainer ({titulo}) {
     const [prods, setProds ] = useState([]);
     const [loading, setLoading] = useState(true);
-        
-    useEffect(()=> {        
-        getFetch.then(resp => setProds(resp))
-        .catch(err => console.log(err))
-        .finally(() => setLoading(false))
-    }, [])
+    const { id } = useParams ()
+
+    useEffect(()=> {  
+        if ( id ) {
+            getFetch.then(resp => setProds(resp.filter(prod=> prod.categoria === id)))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+        } else {
+            getFetch.then(resp => setProds(resp))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+        }
+    }, [id])
 
 
 

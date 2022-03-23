@@ -4,8 +4,6 @@ const NavbarItem = ({nombre, icon}) => {
     )
 }
 
-
-
 export default NavbarItem
 
 //<i class='bx bxs-home'></i>
