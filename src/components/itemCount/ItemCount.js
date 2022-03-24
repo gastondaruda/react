@@ -1,5 +1,6 @@
 import {useState, setCount} from "react"
 import './itemCount.css'
+import Intercambiabilidad from './Intercambiabilidad'
 
 function ItemCount({stock, initial=1}) {
     const [ count, setCount ] = useState(initial)// devuelve un array
@@ -39,7 +40,7 @@ function ItemCount({stock, initial=1}) {
                     <label className="btn-count">{count}</label>
                     <button className="btn" onClick={handleCount}>+</button>
                 </div>
-                    <button className="btn-add" onClick={addCarT}><i class='bx bxs-cart-add'></i></button>
+                    <Intercambiabilidad />
             </div>
 
 

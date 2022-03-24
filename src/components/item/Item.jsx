@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Intercambiabilidad from '../itemCount/Intercambiabilidad' 
 
 
 const Item = ({prod}) => {
@@ -14,7 +15,7 @@ const Item = ({prod}) => {
                         <h3 className='card-title lora'>{`${prod.nombre} - ${prod.categoria}`}</h3>
                         <h3 className='card-precio questrial'>${prod.precio}</h3> 
                     </div>
-                    <Link to={`detalle/${prod.id}`} >
+                    <Link to={`/detalle/${prod.id}`} >
                         <a href='#' className='div-detail questrial'>Comprar</a>
                     </Link>
                 </div>

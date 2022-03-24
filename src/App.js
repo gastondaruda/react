@@ -1,14 +1,14 @@
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import Navbar from './components/Navbar/navBar.jsx';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContianer from './components/ItemDetailContainer';
-import Carrito from './components/Carrito';
-import './components/ItemDetail';
+import ItemListContainer from './components/container/ItemListContainer';
+import ItemDetailContianer from './components/container/ItemDetailContainer';
+import Carrito from './components/Carrito/Carrito';
+import './components/itemDetail/ItemDetail';
 import './components/Navbar/scroll';
-import Api from './components/Api';
-import './components/itemCard.css';
-import './components/itemCount.css';
+import Api from './components/Api/Api';
+import './components/item/itemCard.css';
+import './components/itemCount/itemCount.css';
 import './components/font.css'
 
 

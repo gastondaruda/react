@@ -3,9 +3,8 @@ import {useState} from 'react'
 import './navbar.css'
 import logo from '../../assets/imagenes/logo.png'
 import NavbarItem from './navbarItem' 
-import CartWidget from '../cartWidget'
+import CartWidget from '../widget/cartWidget'
 import { NavLink, Link } from 'react-router-dom'
-import Carrito from '../Carrito'
 
 const Navbar = () => {   
     
@@ -17,15 +16,21 @@ const handleToggle = () => {
 
     return (
         <nav className='nav' id="navbar">
-            <img src={logo} className="nav_logo" alt="logo" />
-            <CartWidget />
+            <NavLink to="/">
+                <img src={logo} className="nav_logo" alt="logo" />
+            </NavLink>
+            
+            <NavLink to="/Carrito">
+                <CartWidget />
+            </NavLink> 
             
             <h2 className='nav_title questrial' id='title'>Momento Dolce Pastelería</h2>
             <li className='nav_li lato'>
-                <Link to="/">
-                    <NavbarItem icon="bx bxs-home" nombre='Productos' className="productos"/>
+                <NavLink to="/">
+                    <NavbarItem icon="bx bxs-home" nombre='Productos' className="productos" onClick={handleToggle}/>
+                </NavLink>
                     
-                    <button onClick={handleToggle}>+</button>
+                    <button onClick={handleToggle}><i class='bx bxs-down-arrow-circle' ></i></button>
                     
                     <div className={`divCategoria ${isActive ? "active" : " " }`} >
                         <NavLink to="categoria/Tortas" className="subCategory-a">Tortas</NavLink>
@@ -35,12 +40,6 @@ const handleToggle = () => {
                         <NavLink to="categoria/Desayunos" className="subCategory-a">Desayunos</NavLink>
                     </div>
                     
-                    
-                
-
-                </Link>
-
-                
                 <Link to="Carrito">
                     <NavbarItem icon="bx bxs-store-alt" nombre='Carrito' className="Lato"/>
                 </Link>

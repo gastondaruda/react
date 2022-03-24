@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import {getFetch} from '../helpers/getFetch'
-import ItemList from './ItemList';
-import bg from '../assets/imagenes/bg2.jpg';
+import {getFetch} from '../../helpers/getFetch'
+import ItemList from '../itemList/ItemList';
+import bg from '../../assets/imagenes/bg2.jpg';
 
 
 
@@ -23,8 +23,6 @@ function ItemListContainer ({titulo}) {
             .finally(() => setLoading(false))
         }
     }, [id])
-
-
 
     return (
         <>

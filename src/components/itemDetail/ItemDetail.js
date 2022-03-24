@@ -1,4 +1,4 @@
-import ItemCount from './ItemCount';
+import ItemCount from '../itemCount/ItemCount';
 
 function ItemDetail({producto}) {
   
