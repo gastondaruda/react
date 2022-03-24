@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ItemCount from "./ItemCount";
 
 const InputCount = () => {
 
@@ -14,7 +15,7 @@ const BtnCount = ({handleInter})=> {
     return <button className="btn-add questrial" onClick={handleInter}>Agregar al carrito</button>
 }
 
-const Intercabilidad = () => {
+const Intercabilidad = (producto) => {
     const [inputType , setInputType ] = useState('button')
     const handleInter = () => {
         setInputType('input')
@@ -24,7 +25,10 @@ const Intercabilidad = () => {
         <>
         {
             inputType === 'button' ?
+            <>
+                <ItemCount stock={producto.stock}/>
                 <BtnCount handleInter={handleInter} />
+            </>
             :
             <InputCount />
         }

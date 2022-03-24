@@ -40,7 +40,7 @@ function ItemCount({stock, initial=1}) {
                     <label className="btn-count">{count}</label>
                     <button className="btn" onClick={handleCount}>+</button>
                 </div>
-                    <Intercambiabilidad />
+                
             </div>
 
 
