@@ -12,7 +12,7 @@ function ItemDetail({producto}) {
               <p className="text-detail questrial">"lorem lorem lorem lorem lorem"</p>
               <h3 className='card-precio questrial'>${producto.precio}</h3>
               
-              <Intercambiabilidad />
+              <Intercambiabilidad stock={producto.stock}/>
             </div>
       </div>
     )
