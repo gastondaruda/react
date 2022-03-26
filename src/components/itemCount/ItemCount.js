@@ -1,6 +1,5 @@
 import {useState, setCount} from "react"
 import './itemCount.css'
-import Intercambiabilidad from './Intercambiabilidad'
 
 function ItemCount({stock, initial=1}) {
     const [ count, setCount ] = useState(initial)// devuelve un array
@@ -18,20 +17,14 @@ function ItemCount({stock, initial=1}) {
         }
     }
     const handleLess = () => {
-        if(count >=1 ){
-            setCount (count - 1)
+        if(count === 0 ){
+            count = 1;
+            alert("El mínimo es 1")
         } else {
-            count = 0;
+            setCount (count - 1)
         }
     } 
 
-    const addCarT = () => {
-        if(count > 0){
-            alert("Agregado al carrito")
-        }else{
-            alert("No hay producto seleccionado")
-        }
-    }
     
     return (
             <div className="div-count">

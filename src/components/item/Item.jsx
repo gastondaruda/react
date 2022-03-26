@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Intercambiabilidad from '../itemCount/Intercambiabilidad' 
 
 
 const Item = ({prod}) => {
