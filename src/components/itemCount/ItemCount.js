@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState} from "react";
 
-const BtnCount = ({stock, initial=1, onAdd, handleInter})=> {
+const BtnCount = ({stock, initial=1, onAdd, id})=> {
     const [ count, setCount ] = useState(initial)// devuelve un array
        //let count = 0;
 

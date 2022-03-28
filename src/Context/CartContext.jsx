@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react"
-
 export const CartContext = createContext([]);
 
 export const useCartContext = () => useContext(CartContext)
@@ -9,15 +8,16 @@ function CartContextProvider({children}) {
 
     const addToCart=(item) => {
         // repita duplicado
-        const foundItem = cartList.find(cartList => item.id === cartList.id)
-        
+        const foundItem = cartList.find(item => cartList.id === item.id)
+        console.log(cartList)
+
         if(foundItem){
-            foundItem.cantidad += 1;
+            foundItem.cantidad += item.cantidad;
             setCartList([...cartList])
-            console.log("1")
+            console.log("si es el mismo producto")
         }else {
             setCartList([ ...cartList, item])
-            console.log("2")
+            console.log("No es el mismo")
         }
 
         

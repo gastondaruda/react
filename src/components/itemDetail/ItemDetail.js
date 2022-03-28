@@ -20,13 +20,15 @@ const InputCount = () => {
 
 function ItemDetail({producto}) {
 
+  console.log(producto)
   const {addToCart} = useCartContext()
 
   const onAdd = (cant, id) => {
-    console.log(cant)
     setInputType('input')
-    addToCart({ ...producto, cantidad: cant, id })
+    addToCart({ ...producto, cantidad: cant, id: producto.id })
   }
+
+
     const [inputType , setInputType ] = useState('button')
     
     return (

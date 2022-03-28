@@ -11,6 +11,8 @@ function Carrito() {
     const [inputType , setInputType ] = useState('button')
     
     console.log(cartList)
+
+
     return (
         <div className="carrito-container">
             <h3 className="Lora cart-title">Mi pedido</h3>
@@ -24,6 +26,7 @@ function Carrito() {
             : 
             cartList.map(prod =><div className="cart-map questrial">
                                         <img className="img-cart" src={prod.url}></img> 
+                                        <p>ID: {prod.id}</p>
                                         <p className="li-cart">{prod.nombre}</p>
                                         <p className="price-cart">${prod.precio}</p>
                                         <p className="cant-cart">Cantidad: <span className="cant">{prod.cantidad}</span></p>
