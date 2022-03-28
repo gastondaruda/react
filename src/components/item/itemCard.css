@@ -68,14 +68,15 @@
         transform: rotate(360deg);
     }
 }
-
-.container .message{
+.container{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.message, .loader{
     color: #000;
     position: absolute;
     font-size: 1rem;
-    /*top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);*/
     animation: message 1s alternate infinite ease-in-out;
 }
 @keyframes message {
@@ -142,4 +143,11 @@
 .card-precio{
     margin-top: .5rem;
     color: #B63143;
+}
+
+.buy{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

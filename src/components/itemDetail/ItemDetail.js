@@ -1,25 +1,34 @@
-
-import ItemCount from '../itemCount/ItemCount';
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useCartContext } from "../../Context/CartContext";
 
-const BtnCount = ({handleInter})=> {
-  return <button className="btn-add questrial" onClick={handleInter}>Agregar al carrito</button>
-}
+import BtnCount from "../itemCount/ItemCount";
+import "./itemDetail.css";
 
 const InputCount = () => {
   return (
-      <Link to="/Carrito">
-          <button className="btn-add questrial">Ir al Carrito</button>
+    <div className="btn-div">
+      <Link to="/">
+        <button className="btn-add questrial">Seguir comprando</button>
       </Link>
+      <Link to="/Carrito">
+          <button className="btn-add carrito questrial">Ir al Carrito</button>
+      </Link>
+    </div>
   )
 }
 
 function ItemDetail({producto}) {
+
+  const {addToCart} = useCartContext()
+
+  const onAdd = (cant, id) => {
+    console.log(cant)
+    setInputType('input')
+    addToCart({ ...producto, cantidad: cant, id })
+  }
     const [inputType , setInputType ] = useState('button')
-    const handleInter = () => {
-        setInputType('input')
-    }
+    
     return (
       <div className="itemDetail">
             <img className="image-detail" src={producto.url} alt = 'imagen' />
@@ -31,8 +40,8 @@ function ItemDetail({producto}) {
               {
                 inputType === 'button' ?
                 <>
-                    <ItemCount stock={producto.stock}/>
-                    <BtnCount handleInter={handleInter} />
+                    
+                    <BtnCount  stock={producto.stock} onAdd={onAdd} />
                 </>
                 :
                 <InputCount />
@@ -44,4 +53,3 @@ function ItemDetail({producto}) {
 
 
   export default ItemDetail
-  

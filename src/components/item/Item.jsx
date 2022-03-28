@@ -12,11 +12,14 @@ const Item = ({prod}) => {
                     </div>
                     <div className='title-flex'> 
                         <h3 className='card-title lora'>{`${prod.nombre} - ${prod.categoria}`}</h3>
-                        <h3 className='card-precio questrial'>${prod.precio}</h3> 
+                        <div className='buy'>
+                            <h3 className='card-precio questrial'>${prod.precio}</h3> 
+                            <Link to={`/detalle/${prod.id}`} >
+                                <button href='#' className='btn-add carrito questrial'>Comprar</button>
+                            </Link>
+                        </div>
                     </div>
-                    <Link to={`/detalle/${prod.id}`} >
-                        <a href='#' className='div-detail questrial'>Comprar</a>
-                    </Link>
+                    
                 </div>
                 
             

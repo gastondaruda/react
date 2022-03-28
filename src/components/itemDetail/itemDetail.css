@@ -1,3 +1,8 @@
-.itemDetail{
-    border: 2px solid red;
+.btn-div{
+    display: flex;
+}
+
+.carrito{
+    background-color: #B63143!important;
+    color: #eee!important;
 }

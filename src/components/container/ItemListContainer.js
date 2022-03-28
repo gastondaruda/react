@@ -29,9 +29,9 @@ function ItemListContainer ({titulo}) {
             <img className='img' src={bg} alt=""></img>
             <div className="cards">
                 { loading ? <div className='container'>
-                    <div className='loader'></div>
-                    <p className='message'>Cargando </p>
-                </div> : 
+                                <div className='loader'></div>
+                                <p className='message'>Cargando </p>
+                            </div> : 
                 <ItemList prods={prods}/> 
             }
             </div>

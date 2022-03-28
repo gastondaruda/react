@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import  CartContextProvider  from './Context/CartContext'
 import Navbar from './components/Navbar/navBar.jsx';
 import ItemListContainer from './components/container/ItemListContainer';
 import ItemDetailContianer from './components/container/ItemDetailContainer';
@@ -12,34 +13,27 @@ import './components/itemCount/itemCount.css';
 import './components/font.css'
 
 
+
 function App() {
-  
+  console.log(CartContextProvider)
   return ( 
     <BrowserRouter>
-    <div className="App">
-      <Navbar />
-
-      <Routes>
-
-        <Route path="/" element={<ItemListContainer titulo='Soy itemListContainer' />}/>
-
-        <Route path="/categoria/:id" element={<ItemListContainer />}/>
-        
-        <Route path="/detalle/:Id" element={<ItemDetailContianer />} />
-
-        <Route path="/carrito" element={<Carrito/> }  />
-        <Route path="/api" element={<Api />} />
-
-        <Route path="/*" element={<Navigate to="/" />} />
-
-        
-        
-      </Routes>
-    </div>
+      <CartContextProvider>
+        <div className="App">
+          <Navbar />
+            <Routes>
+              <Route path="/" element={<ItemListContainer titulo='Soy itemListContainer' />}/>
+              <Route path="/categoria/:id" element={<ItemListContainer />}/>              
+              <Route path="/detalle/:Id" element={<ItemDetailContianer />} />
+              <Route path="/carrito" element={<Carrito/> }  />
+              <Route path="/api" element={<Api />} />
+              <Route path="/*" element={<Navigate to="/" />} />
+            </Routes>
+        </div>
+      </CartContextProvider>
     </BrowserRouter>
   );
 }
-
 export default App;
 
 

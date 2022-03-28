@@ -1,0 +1,32 @@
+.carrito-container{
+    border: 2px solid red;
+    margin-top: 3rem;
+    width: 100%;
+    height: 100%;
+}
+.cart-title{
+    font-size: 2.5rem;
+    margin: 2rem auto;
+}
+
+.cart-map{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img-cart,
+.li-cart,
+.price-cart,
+.cant-cart{
+    margin: 1rem;
+    font-size: 1.8rem;
+}
+.img-cart{
+    width: 15rem;
+    border-radius: 10px;
+}
+.price-cart,
+.cant{
+    color: #B63143;
+}
