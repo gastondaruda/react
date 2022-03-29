@@ -5,7 +5,6 @@ import {getFetch , getFetchOne } from "../../helpers/getFetch"
 
 function ItemDetailContainer() {
     const [producto, setProducto] = useState({})
-    console.log(producto)
     const { Id } = useParams()     
     useEffect(()=>{
         getFetch

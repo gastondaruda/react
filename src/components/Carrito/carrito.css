@@ -1,12 +1,17 @@
 .carrito-container{
-    border: 2px solid red;
     margin-top: 3rem;
     width: 100%;
     height: 100%;
 }
+.empty-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .cart-title{
     font-size: 2.5rem;
-    margin: 2rem auto;
+    margin: .5rem auto;
 }
 
 .cart-map{
@@ -29,4 +34,8 @@
 .price-cart,
 .cant{
     color: #B63143;
+}
+
+.empty-cart{
+    margin-bottom: 3rem;
 }

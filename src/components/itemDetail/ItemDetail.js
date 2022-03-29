@@ -18,16 +18,14 @@ const InputCount = () => {
   )
 }
 
-function ItemDetail({producto}) {
-
-  console.log(producto)
+function ItemDetail({producto, initial}) {
   const {addToCart} = useCartContext()
-
+  const [ count, setCount ] = useState(initial)
+  
   const onAdd = (cant, id) => {
     setInputType('input')
     addToCart({ ...producto, cantidad: cant, id: producto.id })
   }
-
 
     const [inputType , setInputType ] = useState('button')
     
@@ -38,6 +36,7 @@ function ItemDetail({producto}) {
               <h5 className='p-detail lora'>{producto.nombre}</h5>
               <p className="text-detail questrial">"lorem lorem lorem lorem lorem"</p>
               <h3 className='card-precio questrial'>${producto.precio}</h3>
+              <p>Stock: {producto.stock}-count</p>
               
               {
                 inputType === 'button' ?

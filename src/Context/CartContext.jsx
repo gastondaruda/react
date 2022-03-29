@@ -8,21 +8,22 @@ function CartContextProvider({children}) {
 
     const addToCart=(item) => {
         // repita duplicado
-        const foundItem = cartList.find(item => cartList.id === item.id)
-        console.log(cartList)
+        const foundItem = cartList.find(itemCart => itemCart.id === item.id)
 
         if(foundItem){
             foundItem.cantidad += item.cantidad;
             setCartList([...cartList])
-            console.log("si es el mismo producto")
         }else {
             setCartList([ ...cartList, item])
-            console.log("No es el mismo")
-        }
-
-        
+        }        
     }
-            
+        const eliminarProducto = (id) => {
+        const deleteItem = cartList.filter(itemCart => itemCart.id !== id)
+        setCartList(deleteItem)
+    }
+    const totalPrecio = () => {
+        return cartList.reduce((acc, value) => acc + value.precio*value.cantidad, 0)
+    }
 
     const vaciarCarrito = () => {
         setCartList([])
@@ -31,7 +32,9 @@ function CartContextProvider({children}) {
         <CartContext.Provider value={{
             cartList,
             addToCart,
-            vaciarCarrito
+            vaciarCarrito,
+            eliminarProducto,
+            totalPrecio
         }}>
             {children}
         </CartContext.Provider>

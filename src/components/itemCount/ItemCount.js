@@ -5,6 +5,8 @@ const BtnCount = ({stock, initial=1, onAdd, id})=> {
     const [ count, setCount ] = useState(initial)// devuelve un array
        //let count = 0;
 
+        
+    
         const handleCount = () => {
           //count = count + 1;
             if(count < stock){
@@ -27,7 +29,7 @@ const BtnCount = ({stock, initial=1, onAdd, id})=> {
     }
     
     return (
-            <>       
+            <>     
             <div className="div-count">
                     <div className="count">
                         <button className="btn" onClick={handleLess}>-</button>
