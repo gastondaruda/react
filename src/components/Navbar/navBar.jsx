@@ -26,6 +26,7 @@ const handleToggle = () => {
             
             <h2 className='nav_title questrial' id='title'>Momento Dolce Pastelería</h2>
             <li className='nav_li lato'>
+                <div className='producto-div'>
                 <NavLink to="/">
                     <NavbarItem icon="bx bxs-home" nombre='Productos' className="productos" onClick={handleToggle}/>
                 </NavLink>
@@ -39,7 +40,7 @@ const handleToggle = () => {
                         <NavLink to="categoria/Alfajores" className="subCategory-a">Alfajores</NavLink>
                         <NavLink to="categoria/Desayunos" className="subCategory-a">Desayunos</NavLink>
                     </div>
-                    
+                    </div>
                 <Link to="Carrito">
                     <NavbarItem icon="bx bxs-store-alt" nombre='Carrito' className="Lato"/>
                 </Link>
@@ -48,6 +49,7 @@ const handleToggle = () => {
                     <NavbarItem icon="bx bxs-group" nombre='Api resetas'className="Lato"/>
                 </Link>
             </li>
+            <i class='bx bx-menu'></i>
         </nav>
     )
 }

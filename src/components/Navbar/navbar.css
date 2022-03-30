@@ -49,15 +49,67 @@ font-family: 'Source Sans Pro', sans-serif;
     cursor: pointer;
     color: rgb(8, 207, 8);
 }
+.producto-div{
+    display: flex;
+    align-items: center;
+}
 .nav_a{
     color: #000;
     text-decoration: none;
 }
+.widget{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .bxs-cart{
+    color: #000;
     font-size: 3rem;
     position: relative;
-    margin: auto 1rem;
+    margin-left: 2rem;
     cursor: pointer;
+}
+.bx-number{
+    width: 2rem;
+    background-color: #B63143;
+    border-radius: 50%;
+    color: #eee;
+}
+
+.bx-menu{
+    font-size: 2rem;
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .nav_title{
+        font-size: 1rem;
+    }
+    .nav_logo,
+    .bxs-cart{
+        display: none;
+    }
+    .nav_li{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 3rem;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0px 0px 15px 15px;
+        background-color: #fff;
+    }
+    .nav_ul{
+        padding: .5rem;
+    }
+    .bx-menu{
+        display: inline-flex;
+    }
+    .producto-div{
+        display: flex;
+        align-items: center;
+    }
 }
 /*
 .nav_ul::after{
