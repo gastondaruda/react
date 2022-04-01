@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); /*texto*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 
 /*
@@ -18,7 +19,10 @@ font-family: 'Dancing Script', cursive;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
 }
-
 .lora{
     font-family: 'Lora', serif;
+}
+.dancing{
+    font-family: 'Dancing Script', cursive;
+    color: #000;
 }

@@ -23,18 +23,18 @@ import img12 from '../assets/imagenes/IMG_12.jpg'
 import img12h from '../assets/imagenes/IMG_12h.jpg'
 
 const productos = [
-    {id:'Torta1', nombre: 'Torta 1', precio: 1500, categoria:"Desayunos", description: 'Lorem Lorem Lorem Lorem', stock: 5 , url: img1, url2: img1h},
-    {id:'Torta2', nombre: 'Torta 2', precio: 1500, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 7 , url: img2, url2: img2h},
-    {id:'Torta3', nombre: 'Torta 3', precio: 1500, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 10 , url: img3, url2: img3h},
-    {id:'Torta4', nombre: 'Torta 4', precio: 1500, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 2 , url: img4, url2: img4h},
-    {id:'Torta5', nombre: 'Torta 5', precio: 1500, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img5, url2: img5h},
-    {id:'Torta6', nombre: 'Torta 6', precio: 1500, categoria:"Tartas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img6, url2: img6h},
-    {id:'Torta7', nombre: 'Torta 7', precio: 1500, categoria:"Muffins", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img7, url2: img7h},
-    {id:'Torta8', nombre: 'Torta 8', precio: 1500, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img8, url2: img8h},
-    {id:'Torta9', nombre: 'Torta 9', precio: 1500, categoria:"Tartas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img9, url2: img9h},
-    {id:'Torta10', nombre: 'Torta 10', precio: 1500, categoria:"Tartas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img10, url2: img10},
-    {id:'Torta11', nombre: 'Torta 11', precio: 1500, categoria:"Alfajores", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img11, url2: img11h},
-    {id:'Torta12', nombre: 'Torta 12', precio: 1500, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img12, url2: img12h}
+    {id:'Torta1', nombre: 'Desayuno', precio: 3100, categoria:"Desayunos", description: 'Box de regalo', stock: 5 , url: img1, url2: img1h},
+    {id:'Torta2', nombre: 'Torta Brownie', precio: 2200, categoria:"Tortas", description: 'Torta brownie con dulce de leche, merengue y frutillas', stock: 7 , url: img2, url2: img2h},
+    {id:'Torta3', nombre: 'Mousse de Dulce de leche', precio: 2300, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 10 , url: img3, url2: img3h},
+    {id:'Torta4', nombre: 'Tiramisu', precio: 1900, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 2 , url: img4, url2: img4h},
+    {id:'Torta5', nombre: 'Chocotorta', precio: 2500, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img5, url2: img5h},
+    {id:'Torta6', nombre: 'Key Lime Pie', precio: 1950, categoria:"Tartas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img6, url2: img6h},
+    {id:'Torta7', nombre: 'Cupcakes(12u)', precio: 1600, categoria:"Muffins", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img7, url2: img7h},
+    {id:'Torta8', nombre: 'Letter Cake', precio: 4200, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img8, url2: img8h},
+    {id:'Torta9', nombre: 'Tarta de Frutillas', precio: 1650, categoria:"Tartas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img9, url2: img9h},
+    {id:'Torta10', nombre: 'Tarta de Coco', precio: 1320, categoria:"Tartas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img10, url2: img10},
+    {id:'Torta11', nombre: 'Alfajores de Maicena(12u)', precio: 425, categoria:"Alfajores", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img11, url2: img11h},
+    {id:'Torta12', nombre: 'Biscuit imprimé', precio: 2050, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img12, url2: img12h}
 ]
 
 export const getFetch = new Promise((resolve, reject)=> {

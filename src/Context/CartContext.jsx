@@ -21,8 +21,20 @@ function CartContextProvider({children}) {
         const deleteItem = cartList.filter(itemCart => itemCart.id !== id)
         setCartList(deleteItem)
     }
+    const totalPorProducto = (id) => {
+        const itemFilter = cartList.filter(itemCart => itemCart.id === id)
+        return itemFilter.reduce((acc, value) => acc + value.precio*value.cantidad, 0)
+    }
     const totalPrecio = () => {
         return cartList.reduce((acc, value) => acc + value.precio*value.cantidad, 0)
+    }
+    const Iva = () => {
+        let iva = cartList.reduce((acc, value) => acc + value.precio*value.cantidad*21/100, 0)
+        return iva.toFixed(0)
+    }
+    const totalPrecioMasIva = () => {
+        let TotalMasIva = cartList.reduce((acc, value) => acc + value.precio*value.cantidad+value.precio*value.cantidad*21/100, 0)
+        return TotalMasIva.toFixed(0);
     }
 
     const vaciarCarrito = () => {
@@ -31,7 +43,6 @@ function CartContextProvider({children}) {
 
     const numberWidget = () => {
         return cartList.reduce((acc, value) => acc + value.cantidad, 0);
-        console.log(cartList)
     }
 
     return (
@@ -40,7 +51,10 @@ function CartContextProvider({children}) {
             addToCart,
             vaciarCarrito,
             eliminarProducto,
+            totalPorProducto,
+            Iva,
             totalPrecio,
+            totalPrecioMasIva,
             numberWidget
         }}>
             {children}

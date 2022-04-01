@@ -70,7 +70,11 @@ font-family: 'Source Sans Pro', sans-serif;
     cursor: pointer;
 }
 .bx-number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 2rem;
+    height: 2rem;
     background-color: #B63143;
     border-radius: 50%;
     color: #eee;
@@ -140,7 +144,9 @@ font-family: 'Source Sans Pro', sans-serif;
 .img{
     width: 100%;
     margin-top: 0;
+    filter: brightness(50%)
 }
+
 
 /*------------------------*/
 .divCategoria{

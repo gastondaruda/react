@@ -34,9 +34,8 @@ function ItemDetail({producto, initial}) {
             <img className="image-detail" src={producto.url} alt = 'imagen' />
             <div className="detail-flex">
               <h5 className='p-detail lora'>{producto.nombre}</h5>
-              <p className="text-detail questrial">"lorem lorem lorem lorem lorem"</p>
+              <p className="text-detail questrial">{producto.description}</p>
               <h3 className='card-precio questrial'>${producto.precio}</h3>
-              <p>Stock: {producto.stock}-count</p>
               
               {
                 inputType === 'button' ?

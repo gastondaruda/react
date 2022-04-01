@@ -1,4 +1,4 @@
-const NavbarItem = ({nombre, icon}) => {
+const NavbarItem = ({nombre}) => {
     return (
         <p className="nav_ul questrial">{nombre}</p>
     )

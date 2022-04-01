@@ -45,8 +45,8 @@ const handleToggle = () => {
                     <NavbarItem icon="bx bxs-store-alt" nombre='Carrito' className="Lato"/>
                 </Link>
 
-                <Link to="api">
-                    <NavbarItem icon="bx bxs-group" nombre='Api resetas'className="Lato"/>
+                <Link to="/FormaDePago">
+                    <NavbarItem icon="bx bxs-group" nombre='Forma de pago'className="Lato"/>
                 </Link>
             </li>
             <i class='bx bx-menu'></i>

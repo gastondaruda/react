@@ -5,4 +5,5 @@
 .carrito{
     background-color: #B63143!important;
     color: #eee!important;
+    cursor: pointer;
 }

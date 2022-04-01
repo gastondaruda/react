@@ -26,7 +26,7 @@ function Carrito() {
                                     <div className="cart-map questrial">
                                         <img className="img-cart" src={prod.url} alt=""></img>
                                         <p className="li-cart">{prod.nombre}</p>
-                                        <p className="price-cart">${prod.precio}</p>
+                                        <p className="price-cart">${prod.precio} c/u</p>
                                         <p className="cant-cart">Cantidad: <span className="cant">{prod.cantidad}</span></p>
                                         <button className="btn-add carrito" onClick={() => eliminarProducto(prod.id)}>Eliminar producto</button>
                                     </div>
@@ -38,6 +38,10 @@ function Carrito() {
                                     <Link to="/">
                                         <button className="btn-add carrito">Ver productos</button> 
                                     </Link>
+                                    <Link to="/FormaDePago">
+                                        <button className="btn-add btn-buy">Finalizar Compra</button>
+                                    </Link>
+
                                     </>}
         </div>
     )

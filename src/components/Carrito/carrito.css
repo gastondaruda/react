@@ -15,10 +15,11 @@
 }
 
 .cart-map{
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: center;
-    
+    align-items: center;
+    margin: 0 10rem;
 }
 .img-cart,
 .li-cart,
@@ -31,6 +32,11 @@
     width: 15rem;
     border-radius: 10px;
     
+}
+.btn-buy{
+    background-color: rgb(6, 175, 6)!important;
+    color: #eee!important;
+    cursor: pointer;
 }
 
 .price-cart,

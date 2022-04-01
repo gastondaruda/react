@@ -7,7 +7,7 @@ import ItemDetailContianer from './components/container/ItemDetailContainer';
 import Carrito from './components/Carrito/Carrito';
 import './components/itemDetail/ItemDetail';
 import './components/Navbar/scroll';
-import Api from './components/Api/Api';
+import FormaDePago from './components/Api/FormaDePago';
 import './components/item/itemCard.css';
 import './components/itemCount/itemCount.css';
 import './components/font.css'
@@ -26,7 +26,7 @@ function App() {
               <Route path="/categoria/:id" element={<ItemListContainer />}/>              
               <Route path="/detalle/:Id" element={<ItemDetailContianer />} />
               <Route path="/carrito" element={<Carrito/> }  />
-              <Route path="/api" element={<Api />} />
+              <Route path="/FormaDePago" element={<FormaDePago />} />
               <Route path="/*" element={<Navigate to="/" />} />
             </Routes>
         </div>

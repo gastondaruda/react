@@ -10,7 +10,7 @@ function CartWidget() {
                     cartList.length === 0 ?
                     <p></p>
                     :
-                    <p className='bx-number'>{numberWidget()}</p>
+                    <p className='bx-number questrial'>{numberWidget()}</p>
                 }
                 
             </div>
