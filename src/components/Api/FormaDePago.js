@@ -3,6 +3,9 @@ import "./pay.css"
 
 function FormaDePago() {
     const {cartList, totalPrecio,Iva, totalPrecioMasIva, totalPorProducto} = useCartContext()
+    
+
+    
     return (<div className="section-form">
 
             <h1 className="Api dancing">Finalizar compra</h1>
@@ -31,11 +34,33 @@ function FormaDePago() {
                         <input type="email" id="mail" name="user_mail" className="border text" required></input>
                     </li>
                     <li className="flex column f-start">
-                        <label for="msg">Mensaje</label>
-                        <textarea id="msg" name="user_message" className="border"></textarea>
+                        <label for="">Dirección de la calle<span>*</span></label>
+                        <input type="text" id="" name="" className="border text" required></input>
+                    </li>
+                    <li className="flex column f-start">
+                        <label for="">Localidad / Ciudad<span>*</span></label>
+                        <input type="text" id="" name="" className="border text" required></input>
+                    </li>
+                    <li className="flex column f-start">
+                        <label for="">Código postal<span>*</span></label>
+                        <input type="text" id="" name="" className="border text" required></input>
+                    </li>
+                    <li className="flex column f-start">
+                        <label for="">Número de tarjeta<span>*</span></label>
+                        <input type="text" id="" name="" className="border text" required></input>
+                    </li>
+                    <li className="flex row">
+                        <div className="flex column f-start">
+                            <label for="name" className="column">Código de seguridad<span>*</span></label>
+                            <input type="text" id="lastname" name="user_name" className="border text" required></input>
+                        </div>
+                        <div className="flex column f-start">
+                            <label for="name" className="column">Código de seguridad<span>*</span></label>
+                            <input type="text" id="lastname" name="user_name" className="border text" required></input>
+                        </div>
                     </li>
                     </ul>
-                    <input type="submit" value="Enviar" className="btn-add btn-buy"></input>
+                    <input type="submit" value="Comprar" className="btn-add btn-buy"></input>
                 </form>
         
         <div className="TuPedido">

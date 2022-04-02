@@ -19,6 +19,9 @@ const handleToggle = () => {
             <NavLink to="/">
                 <img src={logo} className="nav_logo" alt="logo" />
             </NavLink>
+            <a href="https://www.instagram.com/momento.dolce.pasteleria/" target="_blank">
+                <i class='bx bxl-instagram'></i>
+            </a>
             
             <NavLink to="/Carrito">
                 <CartWidget />
