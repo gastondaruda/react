@@ -7,3 +7,8 @@
     color: #eee!important;
     cursor: pointer;
 }
+@media (max-width: 769px) {
+    .btn-div{
+        flex-direction: column;
+    }
+}

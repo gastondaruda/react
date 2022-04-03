@@ -104,6 +104,7 @@
 
 /*------------*/
 .itemDetail{
+    margin: 0 3rem;
     margin-top: 7rem;
     display: flex;
     justify-content: space-evenly;
@@ -118,10 +119,9 @@
 .detail-flex{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     height: 25rem;
     justify-content: space-evenly;
-    margin-left: -5rem;
 }
 .p-detail{
     font-size: 2rem;
@@ -129,7 +129,11 @@
 }
 
 .text-detail{
+    font-size: 1.1rem;
     margin-top: 3rem;
+    width: 80%;
+    line-height: 2rem;
+    text-align: justify;
 }
 
 .card-title{
@@ -151,3 +155,59 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media (max-width: 769px) {
+    .prod-title{
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+    .card-div{
+        width: 9rem;
+        display: grid;
+        grid-template-rows: repeat(1, 1fr) ;
+        justify-items: stretch;
+        /*
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        */
+}
+    .card-image{
+        width: 9rem;
+        max-height: 6rem;
+        min-width: 8rem;
+    }
+    .div-image .card-image-hover{
+        display: none;
+    }
+    .detail-flex{
+        align-items: center;
+    }
+    .card-title{
+        font-size: .8rem;
+    }
+    .card-precio{
+        margin-top: 0;
+    }
+    .itemDetail{
+        flex-direction: column;
+        margin: 4rem auto;
+    }
+    .itemDetail .image-detail{
+        width: 15rem;
+        margin-bottom: .5rem;
+    }
+    .detail-flex{
+        margin-left: 0;
+        height: 15rem;
+    }
+    .p-detail{
+        font-size: 1.5rem;
+    }
+    .text-detail{
+        margin: 1rem auto;
+    }
+    
+}
+

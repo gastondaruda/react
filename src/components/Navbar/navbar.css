@@ -95,6 +95,9 @@ font-family: 'Source Sans Pro', sans-serif;
         display: none;
     }
     .nav_li{
+        display: none;
+    }
+    .nav_li.active{
         position: absolute;
         display: flex;
         flex-direction: column;

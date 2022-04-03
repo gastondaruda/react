@@ -24,7 +24,7 @@ import img12h from '../assets/imagenes/IMG_12h.jpg'
 
 const productos = [
     {id:'Torta1', nombre: 'Desayuno', precio: 3100, categoria:"Desayunos", description: 'Box de regalo', stock: 5 , url: img1, url2: img1h},
-    {id:'Torta2', nombre: 'Torta Brownie', precio: 2200, categoria:"Tortas", description: 'Torta brownie con dulce de leche, merengue y frutillas', stock: 7 , url: img2, url2: img2h},
+    {id:'Torta2', nombre: 'Torta Brownie', precio: 2200, categoria:"Tortas", description: 'Torta brownie con dulce de leche, merengue y frutillas Torta brownie con dulce de leche, merengue y frutillas ', stock: 7 , url: img2, url2: img2h},
     {id:'Torta3', nombre: 'Mousse de Dulce de leche', precio: 2300, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 10 , url: img3, url2: img3h},
     {id:'Torta4', nombre: 'Tiramisu', precio: 1900, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 2 , url: img4, url2: img4h},
     {id:'Torta5', nombre: 'Chocotorta', precio: 2500, categoria:"Tortas", description: 'Lorem Lorem Lorem Lorem', stock: 4 , url: img5, url2: img5h},

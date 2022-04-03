@@ -69,3 +69,23 @@
 .ul{
     margin-top: 2rem;
 }
+
+@media (max-width: 769px) {
+    .section-form{
+        margin: 0 1rem;
+    }
+    .row{
+        flex-direction: column-reverse;
+    }
+    .TuPedido,
+    .form{
+        width: 100%;
+    }
+    .container-pedido{
+        margin: 0.5rem auto;
+    }
+    .div-pedido{
+        display: flex;
+        flex-direction: row!important;
+    }
+}

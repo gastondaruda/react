@@ -11,7 +11,7 @@ function Carrito() {
     
     return (
         <div className="carrito-container">
-            <h3 className="Lora cart-title">Mi pedido</h3>
+            <h3 className="dancing cart-title">Mi pedido</h3>
             {
                 cartList.length ===  0 ?
             <div className="empty-div">
