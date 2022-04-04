@@ -23,17 +23,17 @@ function CartContextProvider({children}) {
     }
     const totalPorProducto = (id) => {
         const itemFilter = cartList.filter(itemCart => itemCart.id === id)
-        return itemFilter.reduce((acc, value) => acc + value.precio*value.cantidad, 0)
+        return itemFilter.reduce((acc, value) => acc + value.price*value.cantidad, 0)
     }
     const totalPrecio = () => {
-        return cartList.reduce((acc, value) => acc + value.precio*value.cantidad, 0)
+        return cartList.reduce((acc, value) => acc + value.price*value.cantidad, 0)
     }
     const Iva = () => {
-        let iva = cartList.reduce((acc, value) => acc + value.precio*value.cantidad*21/100, 0)
+        let iva = cartList.reduce((acc, value) => acc + value.price*value.cantidad*21/100, 0)
         return iva.toFixed(0)
     }
     const totalPrecioMasIva = () => {
-        let TotalMasIva = cartList.reduce((acc, value) => acc + value.precio*value.cantidad+value.precio*value.cantidad*21/100, 0)
+        let TotalMasIva = cartList.reduce((acc, value) => acc + value.price*value.cantidad+value.price*value.cantidad*21/100, 0)
         return TotalMasIva.toFixed(0);
     }
 

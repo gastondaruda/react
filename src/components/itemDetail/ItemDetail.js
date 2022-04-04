@@ -18,29 +18,30 @@ const InputCount = () => {
   )
 }
 
-function ItemDetail({producto, initial}) {
+function ItemDetail({prod, initial}) {
   const {addToCart} = useCartContext()
   
   const onAdd = (cant, id) => {
     setInputType('input')
-    addToCart({ ...producto, cantidad: cant, id: producto.id })
+    addToCart({ ...prod, cantidad: cant, id: prod.id })
   }
 
     const [inputType , setInputType ] = useState('button')
     
-    return (
+    return ( 
+      
       <div className="itemDetail">
-            <img className="image-detail" src={producto.image1} alt = 'imagen' />
+            <img className="image-detail" src={prod.image1} alt = 'imagen' />
             <div className="detail-flex">
-              <h5 className='p-detail lora'>{producto.name}</h5>
-              <p className="text-detail questrial">{producto.description}</p>
-              <h3 className='card-precio questrial'>${producto.price}</h3>
+              <h5 className='p-detail lora'>{prod.name}</h5>
+              <p className="text-detail questrial">{prod.description}</p>
+              <h3 className='card-precio questrial'>${prod.price}</h3>
               
               {
                 inputType === 'button' ?
                 <>
                     
-                    <BtnCount  stock={producto.stock} onAdd={onAdd} />
+                    <BtnCount  stock={prod.stock} onAdd={onAdd} />
                 </>
                 :
                 <InputCount />

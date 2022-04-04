@@ -42,11 +42,11 @@ const  handleToggleBx = () => {
                         <button onClick={handleToggle}><i class='bx bxs-down-arrow-circle' ></i></button>
                         
                         <div className={`divCategoria ${isActive ? "" : "active" }`} >
-                            <NavLink to="categoria/Tortas" className="subCategory-a">Tortas</NavLink>
-                            <NavLink to="categoria/Tartas" className="subCategory-a">Tartas</NavLink>
-                            <NavLink to="categoria/Muffins" className="subCategory-a">Muffins</NavLink>
-                            <NavLink to="categoria/Alfajores" className="subCategory-a">Alfajores</NavLink>
-                            <NavLink to="categoria/Desayunos" className="subCategory-a">Desayunos</NavLink>
+                            <NavLink to="category/Tortas" className="subCategory-a">Tortas</NavLink>
+                            <NavLink to="category/Tartas" className="subCategory-a">Tartas</NavLink>
+                            <NavLink to="category/Muffins" className="subCategory-a">Muffins</NavLink>
+                            <NavLink to="category/Alfajores" className="subCategory-a">Alfajores</NavLink>
+                            <NavLink to="category/Desayunos" className="subCategory-a">Desayunos</NavLink>
                         </div>
                         </div>
                     <Link to="Carrito">

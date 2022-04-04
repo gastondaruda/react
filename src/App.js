@@ -23,8 +23,8 @@ function App() {
           <Navbar />
             <Routes>
               <Route path="/react" element={<ItemListContainer titulo='Soy itemListContainer' />}/>
-              <Route path="/categoria/:id" element={<ItemListContainer />}/>              
-              <Route path="/detalle/:Id" element={<ItemDetailContianer />} />
+              <Route path="/category/:id" element={<ItemListContainer />}/>              
+              <Route path="/detalle/:id" element={<ItemDetailContianer />} />
               <Route path="/carrito" element={<Carrito/> }  />
               <Route path="/FormaDePago" element={<FormaDePago />} />
               <Route path="/*" element={<Navigate to="/react" />} />

@@ -24,9 +24,9 @@ function Carrito() {
             <>
             {cartList.map(prod =><>
                                     <div className="cart-map questrial">
-                                        <img className="img-cart" src={prod.url} alt=""></img>
-                                        <p className="li-cart">{prod.nombre}</p>
-                                        <p className="price-cart">${prod.precio} c/u</p>
+                                        <img className="img-cart" src={prod.image1} alt=""></img>
+                                        <p className="li-cart">{prod.name}</p>
+                                        <p className="price-cart">${prod.price} c/u</p>
                                         <p className="cant-cart">Cantidad: <span className="cant">{prod.cantidad}</span></p>
                                         <button className="btn-add carrito" onClick={() => eliminarProducto(prod.id)}>Eliminar producto</button>
                                     </div>

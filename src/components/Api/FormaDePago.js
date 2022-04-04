@@ -73,7 +73,7 @@ function FormaDePago() {
             {cartList.map(prod =><>
                                     <div className="dancing flex column">
                                         <div className="flex row between div-pedido">
-                                            <p className="pedido-p">{prod.nombre} x <span className="">{prod.cantidad}</span> </p>
+                                            <p className="pedido-p">{prod.name} x <span className="">{prod.cantidad}</span> </p>
                                             <p className="pedido-p">${totalPorProducto(prod.id)}</p>
                                         </div>
                                         </div></>

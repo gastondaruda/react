@@ -11,30 +11,13 @@ function ItemListContainer ({titulo}) {
     const [prods, setProds ] = useState([]);
     const [loading, setLoading] = useState(true);
     const { id } = useParams ()
+    const {category} = useParams()
 
-    /*
-    useEffect(() => {
-        const dataB = getFirestore()
-        const queryDoc = doc(dataB, "items" , "id")
-        getDoc(queryDoc)
-        .then(resp => setProd( {id: resp.id, ...resp.data()}))    
-    }, [id]) */
-
+    
 
     useEffect(()=> {
         const dataB = getFirestore()
-        /*
-        if(id)
-        {
-            const queryCollection = collection(dataB, "items")
-            const queryfilter = query(queryCollection, where("category", "==", "Tortas" ))
-            getDocs(queryfilter)
-            .then(resp => setProds(resp.docs.map(prod =>( {id: prod.id, ...prod.data()}))))
-            .catch(err => console.log(err))
-            .finally(() => setLoading(false))
-        }else{ */
-
-            const queryCollection = collection(dataB, "items")
+        const queryCollection = collection(dataB, "items")
             getDocs(queryCollection)
             .then(resp => setProds(resp.docs.map(prod =>( {id: prod.id, ...prod.data()}))))
             .catch(err => console.log(err))
@@ -42,30 +25,26 @@ function ItemListContainer ({titulo}) {
         /*}*/
         }, [id])
 
-    /*
-    useEffect(()=> {
-        const dataB = getFirestore()
+        useEffect(()=> {
+            const dataB = getFirestore()
+            if(id){
 
-        const queryCollection = collection(dataB, "items")
-        const queryfilter = query(queryCollection, where("category", "==", "Tartas" ))
-        getDocs(queryfilter)
-        .then(resp => setProds(resp.docs.map(prod =>( {id: prod.id, ...prod.data()}))))
-        .catch(err => console.log(err))
-        .finally(() => setLoading(false))
-    }, [id]) */
-
-
-        /*
-        if ( id ) {
-            getFetch.then(resp => setProds(resp.filter(prod=> prod.categoria === id)))
+                const queryCollection = collection(dataB, "items")
+                const queryfilter = query(queryCollection, where("category", "==", id ))
+                getDocs(queryfilter)
+            .then(resp => setProds(resp.docs.map(prod =>( {id: prod.id, ...prod.data()}))))
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
         } else {
-            getFetch.then(resp => setProds(resp))
+            const queryCollection = collection(dataB, "items")
+            getDocs(queryCollection)
+            .then(resp => setProds(resp.docs.map(prod =>( {id: prod.id, ...prod.data()}))))
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
-        }*/
+        }
+        }, [id]) 
 
+        
     return (
         <>
             <img className='img' src={bg} alt=""></img>

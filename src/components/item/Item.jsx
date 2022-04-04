@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 const Item = ({prod}) => {
     return (
-        
-        
         <div className='card-div' key={prod.id}>
                 <Link to={`/detalle/${prod.id}`}>
                     <div className='div-image'>
