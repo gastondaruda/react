@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import {getFetch} from '../../helpers/getFetch'
 import ItemList from '../itemList/ItemList';
 import bg from '../../assets/imagenes/bg2.jpg';
 
@@ -10,18 +9,15 @@ import {collection, getDocs, getFirestore, query, where} from "firebase/firestor
 
 function ItemListContainer ({titulo}) {
     const [prods, setProds ] = useState([]);
-    const [prod, setProd] = useState([])
     const [loading, setLoading] = useState(true);
     const { id } = useParams ()
 
     /*
     useEffect(() => {
         const dataB = getFirestore()
-
         const queryDoc = doc(dataB, "items" , "id")
         getDoc(queryDoc)
-        .then(resp => setProd( {id: resp.id, ...resp.data()}))
-    
+        .then(resp => setProd( {id: resp.id, ...resp.data()}))    
     }, [id]) */
 
 

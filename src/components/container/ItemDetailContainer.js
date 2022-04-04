@@ -9,11 +9,12 @@ function ItemDetailContainer() {
     
     useEffect(() => {
         const dataB = getFirestore()
-        const queryDoc = doc(dataB, "items" , {id})
+        const queryDoc = doc(dataB, "items" , "6x2lPqTnzCGSB8qI82ev") //coómo hacer dinámico?
         getDoc(queryDoc)
-        .then(resp => console.log("hola"))
+        .then(resp => setProd( {id: resp.id, ...resp.data()}))    
     
     }, [id])
+    console.log(prod)
     return (
         <div>            
             <ItemDetail producto={prod}/>             
