@@ -17,8 +17,6 @@ function ItemDetailContainer() {
             .then(resp => setProd( {id: resp.id, ...resp.data()} ))
             .finally(() => setLoading(false))
         }, [id])
-    
-    console.log(prod +" esto no funciona ")
 
     return (
         
