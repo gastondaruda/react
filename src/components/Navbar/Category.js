@@ -1,6 +1,6 @@
-const Category = ({categoria}) => {
+const Category = ({category}) => {
     return (
-        <p className='subCategory'>{categoria}</p>
+        <p className='subCategory-a flex'>{category}</p>
     )
 }
 

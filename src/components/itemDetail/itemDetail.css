@@ -2,10 +2,14 @@
     display: flex;
 }
 
-.carrito{
+.cart{
     background-color: #B63143!important;
     color: #eee!important;
     cursor: pointer;
+    transition: .3s;
+}
+.cart:hover{
+    background-color: #932130!important;
 }
 @media (max-width: 769px) {
     .btn-div{

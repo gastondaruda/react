@@ -1,83 +1,74 @@
 import React from 'react'
-import {useState} from 'react'
-import './navbar.css'
-import logo from '../../assets/imagenes/logo.png'
-import NavbarItem from './navbarItem' 
-import CartWidget from '../widget/cartWidget'
 import { NavLink, Link } from 'react-router-dom'
+import {useState} from 'react'
+import CartWidget from '../widget/cartWidget'
+import NavbarItem from './navbarItem'
+import Category from './Category'
+import Title from '../Title/Title'
+import logo from '../../assets/imagenes/logo.png'
+import './navbar.css'
 
 const Navbar = () => {   
-    
 const [isActive, setActive] = useState("false");
 
 const handleToggle = () => {
     setActive(!isActive);
 }
+
 const  handleToggleBx = () => {
     setActive(!isActive);
 }
 
     return (
-        <nav className='nav' id="navbar">
-            <NavLink to="/react">
+        <nav className='nav'>
+            <div className='flex row'>
+                <NavLink to="/react">
                 <img src={logo} className="nav_logo" alt="logo" />
-            </NavLink>
-            <a href="https://www.instagram.com/momento.dolce.pasteleria/" target="_blank">
-                <i class='bx bxl-instagram'></i>
-            </a>
+                </NavLink>
+                    
+                <NavLink to="/cart">
+                    <CartWidget />
+                </NavLink> 
+            </div>
             
-            <NavLink to="/Carrito">
-                <CartWidget />
-            </NavLink> 
+            <Title title="Momento Dolce pastelería" />
             
-            <h2 className='nav_title questrial' id='title'>Momento Dolce Pastelería</h2>
-            <li className= {`nav_li lato ${isActive ? "active" : " " }`}>
-                
-                
-                    <div className='producto-div'>
-                    <NavLink to="/">
-                        <NavbarItem icon="bx bxs-home" nombre='Productos' className="productos" onClick={handleToggle}/>
-                    </NavLink>
-                        
-                        <button onClick={handleToggle}><i class='bx bxs-down-arrow-circle' ></i></button>
-                        
-                        <div className={`divCategoria ${isActive ? "" : "active" }`} >
-                            <NavLink to="category/Tortas" className="subCategory-a">Tortas</NavLink>
-                            <NavLink to="category/Tartas" className="subCategory-a">Tartas</NavLink>
-                            <NavLink to="category/Muffins" className="subCategory-a">Muffins</NavLink>
-                            <NavLink to="category/Alfajores" className="subCategory-a">Alfajores</NavLink>
-                            <NavLink to="category/Desayunos" className="subCategory-a">Desayunos</NavLink>
+            <li className= {`nav_li lato ${isActive ? "" : "active" }`}>
+                <div className='product-div'>
+                        <NavLink to="/">
+                            <NavbarItem name='Productos' onClick={handleToggle}/>
+                        </NavLink>
+                            <button onClick={handleToggle}><i class='bx bxs-down-arrow-circle'></i></button>
+                            <div className={`divCategoria ${isActive ? "" : "active" }`} >
+                                <NavLink to="category/Tortas">
+                                    <Category category="Tortas" />
+                                </NavLink>
+                                <NavLink to="category/Tartas">
+                                    <Category category="Tartas" />
+                                </NavLink>
+                                <NavLink to="category/Muffins">
+                                    <Category category="Muffins" />
+                                </NavLink>
+                                <NavLink to="category/Alfajores">
+                                    <Category category="Alfajores" />
+                                </NavLink>
+                                <NavLink to="category/Desayunos">
+                                    <Category category="Desayunos" />
+                                </NavLink>
+                            </div>
                         </div>
-                        </div>
-                    <Link to="Carrito">
-                        <NavbarItem icon="bx bxs-store-alt" nombre='Carrito' className="Lato"/>
+
+                    <Link to="cart">
+                        <NavbarItem name='Carrito'/>
                     </Link>
 
-                    <Link to="/FormaDePago">
-                        <NavbarItem icon="bx bxs-group" nombre='Forma de pago'className="Lato"/>
+                    <Link to="/payment">
+                        <NavbarItem name='Forma de pago'/>
                     </Link>
-                
             </li>
-
-            
             <i class='bx bx-menu' onClick={handleToggleBx}></i>
         </nav>
     )
 }
 
 export default Navbar
-
-
-
-/*
-`divCategoria ${isActive ? "active" : " " }`
-<ul className='nav_ul'>
-                    <a className='nav_a' href='#' onClick={Landing}>Landing</a>
-                </ul>
-                <ul className='nav_ul'>
-                    <a className='nav_a' href='#'>Productos</a>
-                </ul>
-                <ul className='nav_ul'>
-                    <a className='nav_a' href='#'>¿Quiénes Somos?</a>
-                </ul>
-*/

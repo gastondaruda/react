@@ -1,0 +1,49 @@
+.footer{
+    width: 100%;
+    height: 400px;
+    background-color: #3F3F3F;
+}
+.footer_title{
+    color: #eee;
+    padding-top: 3rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.bxF{
+    margin-top: 2rem;
+    color: #eee;
+    font-size: 3.5rem;
+    transition: .3s;
+}
+.bxl-instagram:hover{
+    color: rgb(150, 48, 141);
+}
+.bxl-facebook-square:hover{
+    color: #1B74E4;
+}
+.bxl-whatsapp-square:hover{
+    color: #38B547;
+}
+.services{
+    color: #eee;
+    font-size: 1rem;
+    padding: 2rem 0;
+}
+.footer-section{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+.footer-title{
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-decoration-color: #eee;
+}
+.li{
+    line-height: 1rem;
+}
+.li:hover{
+    cursor: pointer;
+}

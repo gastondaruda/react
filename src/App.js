@@ -1,21 +1,19 @@
-import './App.css';
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import  CartContextProvider  from './Context/CartContext'
 import Navbar from './components/Navbar/navBar.jsx';
 import ItemListContainer from './components/container/ItemListContainer';
 import ItemDetailContianer from './components/container/ItemDetailContainer';
-import Carrito from './components/Carrito/Carrito';
+import ShopCart from './components/Cart/ShopCart';
 import './components/itemDetail/ItemDetail';
-import './components/Navbar/scroll';
-import FormaDePago from './components/Api/FormaDePago';
+import Payment from './components/Form/Payment';
+import Footer from './components/footer/Footer';
 import './components/item/itemCard.css';
-import './components/itemCount/itemCount.css';
 import './components/font.css'
 
 
 
 function App() {
-  console.log(CartContextProvider)
+  
   return ( 
     <BrowserRouter>
       <CartContextProvider>
@@ -24,32 +22,15 @@ function App() {
             <Routes>
               <Route path="/react" element={<ItemListContainer titulo='Soy itemListContainer' />}/>
               <Route path="/category/:id" element={<ItemListContainer />}/>              
-              <Route path="/detalle/:id" element={<ItemDetailContianer />} />
-              <Route path="/carrito" element={<Carrito/> }  />
-              <Route path="/FormaDePago" element={<FormaDePago />} />
+              <Route path="/detail/:id" element={<ItemDetailContianer />} />
+              <Route path="/cart" element={<ShopCart/> }  />
+              <Route path="/payment" element={<Payment />} />
               <Route path="/*" element={<Navigate to="/react" />} />
             </Routes>
         </div>
+      <Footer />
       </CartContextProvider>
     </BrowserRouter>
   );
 }
 export default App;
-
-
-/*
-<header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Gasty
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-*/

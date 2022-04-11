@@ -5,7 +5,6 @@ import ItemDetail from "../itemDetail/ItemDetail"
 import {doc, getDoc, getFirestore} from "firebase/firestore"
 
 function ItemDetailContainer() {
-    const [prods, setProds ] = useState([]);
     const [prod, setProd] = useState();
     const [loading, setLoading] = useState(true);
     const { id } = useParams ()   
@@ -19,19 +18,18 @@ function ItemDetailContainer() {
         }, [id])
 
     return (
-        
         <>
-        {
-            loading ? <div className='container'>
+            {
+                loading ? 
+                    <div className='container'>
                         <div className='loader'></div>
-                        <p className='message'>Cargando </p>
-                    </div> :
-                    
-                    <div>            
-                        <ItemDetail prod={prod}/>             
-                    </div>
-                    
-                    }
+                            <p className='message'>Cargando </p>
+                        </div>
+                        :
+                        <div>            
+                            <ItemDetail prod={prod}/>             
+                        </div>
+            }
         </> 
     )
 }

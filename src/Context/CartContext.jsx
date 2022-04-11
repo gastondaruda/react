@@ -7,54 +7,54 @@ function CartContextProvider({children}) {
     const [cartList, setCartList] = useState([])
 
     const addToCart=(item) => {
-        // repita duplicado
         const foundItem = cartList.find(itemCart => itemCart.id === item.id)
 
         if(foundItem){
-            foundItem.cantidad += item.cantidad;
+            foundItem.quantity += item.quantity;
             setCartList([...cartList])
         }else {
             setCartList([ ...cartList, item])
         }        
     }
-        const eliminarProducto = (id) => {
-        const deleteItem = cartList.filter(itemCart => itemCart.id !== id)
-        setCartList(deleteItem)
+
+    const deleteProd = (id) => {
+    const deleteItem = cartList.filter(itemCart => itemCart.id !== id)
+    setCartList(deleteItem)
     }
-    const totalPorProducto = (id) => {
+    const totalOneProd = (id) => {
         const itemFilter = cartList.filter(itemCart => itemCart.id === id)
-        return itemFilter.reduce((acc, value) => acc + value.price*value.cantidad, 0)
+        return itemFilter.reduce((acc, value) => acc + value.price*value.quantity, 0)
     }
-    const totalPrecio = () => {
-        return cartList.reduce((acc, value) => acc + value.price*value.cantidad, 0)
+    const totalPrice = () => {
+        return cartList.reduce((acc, value) => acc + value.price*value.quantity, 0)
     }
     const Iva = () => {
-        let iva = cartList.reduce((acc, value) => acc + value.price*value.cantidad*21/100, 0)
+        let iva = cartList.reduce((acc, value) => acc + value.price*value.quantity*21/100, 0)
         return iva.toFixed(0)
     }
-    const totalPrecioMasIva = () => {
-        let TotalMasIva = cartList.reduce((acc, value) => acc + value.price*value.cantidad+value.price*value.cantidad*21/100, 0)
-        return TotalMasIva.toFixed(0);
+    const totalPricePlusIva = () => {
+        let TotalPlusIva = cartList.reduce((acc, value) => acc + value.price*value.quantity+value.price*value.quantity*21/100, 0)
+        return TotalPlusIva.toFixed(0);
     }
 
-    const vaciarCarrito = () => {
+    const emptyCart = () => {
         setCartList([])
     }
 
     const numberWidget = () => {
-        return cartList.reduce((acc, value) => acc + value.cantidad, 0);
+        return cartList.reduce((acc, value) => acc + value.quantity, 0);
     }
 
     return (
         <CartContext.Provider value={{
             cartList,
             addToCart,
-            vaciarCarrito,
-            eliminarProducto,
-            totalPorProducto,
+            emptyCart,
+            deleteProd,
+            totalOneProd,
             Iva,
-            totalPrecio,
-            totalPrecioMasIva,
+            totalPrice,
+            totalPricePlusIva,
             numberWidget
         }}>
             {children}

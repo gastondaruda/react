@@ -4,7 +4,7 @@ import { useCartContext } from "../../Context/CartContext"
 function CartWidget() {
     const { cartList, numberWidget } = useCartContext()
 
-    return (<div className='widget'>
+    return (<div className='widget flex'>
                 <i class='bx bxs-cart'></i>
                 {
                     cartList.length === 0 ?

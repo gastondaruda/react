@@ -1,11 +1,7 @@
-const NavbarItem = ({nombre}) => {
+const NavbarItem = ({name}) => {
     return (
-        <p className="nav_ul questrial">{nombre}</p>
+        <p className="nav_ul lato">{name}</p>
     )
 }
 
 export default NavbarItem
-
-//<i class='bx bxs-home'></i>
-//<i class='bx bxs-store-alt'></i>
-//<i class='bx bxs-group'></i>
