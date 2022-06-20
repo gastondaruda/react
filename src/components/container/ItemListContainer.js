@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import ItemList from '../itemList/ItemList';
 import Title from '../Title/Title';
 import bg from '../../assets/imagenes/bg2.jpg';
+import Carousel from "./Carousel"
 
 import {collection, getDocs, getFirestore, query, where} from "firebase/firestore"
 
@@ -48,6 +49,7 @@ function ItemListContainer () {
         
     return (
         <>
+            <Carousel />
             <img className='img' src={bg} alt="background_photo"></img>
             <Title title="Nuestros productos"/>
             <div className="cards">

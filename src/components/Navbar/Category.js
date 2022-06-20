@@ -1,6 +1,6 @@
 const Category = ({category}) => {
     return (
-        <p className='subCategory-a flex'>{category}</p>
+        <p className='subCategory flex'>{category}</p>
     )
 }
 

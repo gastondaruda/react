@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    z-index: 100;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .5);
+}
+.bxs-cart{
+    color: #000;
+    font-size: 2rem;
+}
+.nav_logo{
+    margin-left: 2rem;
+    width: 2rem;
+}
+.list{
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    width: 22rem;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.nav_li{
+    color: #000;
+}
+a{
+    text-decoration: none;
+}
+.nav_li:hover{
+    cursor: pointer;
+    color: rgb(8, 207, 8);
+}
+#toggler,
+.navbar label{
+    display: none;
+}
+.divCategoria{
+    display: none;
+}
+
+
+.divCategoria.active{
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #eee;
+    border-radius: 0 0 10px 10px;
+    width: 8rem;
+    top: 2.3rem;
+    margin-left: 0rem;
+    transition: .2s;
+    z-index: 100;
+    right: 14rem;
+}
+.subCategory{
+    font-size: 1.2rem;
+}
+.subCategory:hover{
+    text-decoration: underline;
+    text-decoration-color: rgb(8, 207, 8);
+}
+.div_prod{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.arrow_btn{
+    margin-left: 1rem;
+}
+.bx-number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #B63143;
+    border-radius: 50%;
+    color: #eee;
+}
+.price_navbar{
+    color: #000;
+    margin-left: 1rem;
+}
+
+@media screen and (max-width: 600px){
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list{
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        margin-right: 0;
+    }
+    .navbar{
+        flex-wrap: wrap;
+        padding: .5rem 0;
+    }
+    .nav_logo{
+        display: none;
+    }
+    .bxs-cart{
+        width: 0px;
+        left: 2rem;
+        font-size: 3rem;
+        position: absolute;
+    }
+    .navbar label{
+        font-size: 2rem;
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        left: 0;
+        top: 0.5rem;
+    }
+    
+    #toggler:checked ~ .menu{
+        display: flex;
+        max-height: 100%;
+    }
+    .arrow_btn{
+        right: 5rem;
+        top: 3.4rem;
+    }
+    .divCategoria.active{
+        width: 100%;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .div_prod{
+        
+        flex-direction: column;
+        width: 100%;
+    }
+    .price_navbar{
+        display: none;
+    }
+    .bx-number{
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        left: 4rem;
+    }
+}

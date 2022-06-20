@@ -1,3 +1,4 @@
+/*
 *{
     margin: 0;
     padding: 0;
@@ -44,10 +45,7 @@
     display: flex;
     align-items: center;
 }
-.nav_a{
-    color: #000;
-    text-decoration: none;
-}
+
 .bxs-cart{
     color: #000;
     font-size: 3rem;
@@ -72,41 +70,49 @@
 .bx-menu{
     display: none;
 }
+.navbar p{
+    text-decoration: none;
+    columns: inherit;
+}
+#toggler,
+.navbar label{
+    display: none;
+}
 
 @media (max-width: 768px) {
     .nav_title{
         font-size: 1rem;
     }
-    .nav_logo,
-    .bxs-cart{
-        display: none;
-    }
-    .nav_li{
-        display: none;
-    }
-    .nav_li.active{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 3rem;
-        width: 100%;
-        padding: 1rem;
-        border-radius: 0px 0px 15px 15px;
-        background-color: #fff;
-    }
+    
     .nav_ul{
-        padding: .5rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .navbar label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
     }
     .bx-menu{
-        display: inline-flex;
-        font-size: 2rem;
+        border: 2px solid red;
     }
-    .product-div{
-        display: flex;
-        align-items: center;
+    #toggler:checked ~ .menu{
+        max-height: 100%;
     }
 }
-
+*/
 /*------------------------*/
 .landing_title{
     position: relative;
@@ -125,21 +131,6 @@
 
 
 /*------------------------*/
-.divCategoria{
-    display: none;
-}
-
-.divCategoria.active{
-    display: inline-flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #eee;
-    border-radius: 0 0 10px 10px;
-    width: 8rem;
-    top: 3rem;
-    margin-left: 0rem;
-    transition: .2s;
-}
 
 button{
     text-decoration: none;
@@ -154,7 +145,7 @@ button{
     color: rgb(8, 207, 8);
 }
 
-.subCategory-a{
+.subCategory{
     color: #000;
     transition: .3s;
     margin: .5rem auto;

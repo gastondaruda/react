@@ -7,7 +7,7 @@ const InputCount = () => {
             <button className="btn-add questrial">Seguir comprando</button>
             </Link>
             <Link to="/Cart">
-                <button className="btn-add cart questrial">Ir al Carrito</button>
+                <button className="btn-add cart questrial buttonAdd">Ir al Carrito</button>
             </Link>
         </div>
         )

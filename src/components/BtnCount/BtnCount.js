@@ -44,7 +44,7 @@ const BtnCount = ({stock, initial=1, onAdd})=> {
                     
                 </div>
                 <div className="btn-div">
-                    <button className="btn-add cart questrial" onClick={agregar} >Agregar al carrito</button>
+                    <button className="btn-add cart questrial buttonAdd" onClick={agregar} >Agregar al carrito</button>
                     <Link to="/">
                     <button className="btn-add questrial">Seguir comprando</button>
                     </Link>

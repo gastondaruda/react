@@ -15,10 +15,6 @@ const handleToggle = () => {
     setActive(!isActive);
 }
 
-const  handleToggleBx = () => {
-    setActive(!isActive);
-}
-
     return (
         <nav className='nav'>
             <div className='flex row'>
@@ -33,7 +29,9 @@ const  handleToggleBx = () => {
             
             <Title title="Momento Dolce pastelería" />
             
-            <li className= {`nav_li lato ${isActive ? "" : "active" }`}>
+            <input type="checkbox" id="toggler"></input>
+            <label for="toggler"><i class='bx bx-menu'></i></label>
+            <div className='menu'>
                 <div className='product-div'>
                         <NavLink to="/">
                             <NavbarItem name='Productos' onClick={handleToggle}/>
@@ -65,8 +63,8 @@ const  handleToggleBx = () => {
                     <Link to="/payment">
                         <NavbarItem name='Forma de pago'/>
                     </Link>
-            </li>
-            <i class='bx bx-menu' onClick={handleToggleBx}></i>
+            </div>
+            
         </nav>
     )
 }

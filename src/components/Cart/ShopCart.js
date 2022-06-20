@@ -33,7 +33,7 @@ function ShopCart() {
                                 </>
                                 )}
                                     <p className="flex questrial">Total del carrito: <span className="amount">${totalPrice()}</span></p>
-                                    <div className="flex row">
+                                    <div className="flex row btns">
                                         <button className="btn-add cart lora" onClick={emptyCart}>Vaciar Carrito</button>
                                         <Link to="/">
                                             <button className="btn-add cart lora">Ver productos</button> 

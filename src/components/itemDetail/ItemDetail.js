@@ -25,7 +25,7 @@ function ItemDetail({prod}) {
               {
                 inputType === 'button' ?
                 <>
-                  <BtnCount  stock={prod.stock} onAdd={onAdd} />
+                  <BtnCount stock={prod.stock} onAdd={onAdd} />
                 </>
                 :
                   <InputCount />

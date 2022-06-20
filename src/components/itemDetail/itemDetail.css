@@ -13,6 +13,9 @@
 }
 @media (max-width: 769px) {
     .btn-div{
-        flex-direction: column;
+        flex-direction: row;
+    }
+    .buttonAdd{
+        width: 8rem!important;
     }
 }

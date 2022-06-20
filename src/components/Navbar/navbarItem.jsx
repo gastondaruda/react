@@ -1,6 +1,6 @@
 const NavbarItem = ({name}) => {
     return (
-        <p className="nav_ul lato">{name}</p>
+        <p className="nav_li lato">{name}</p>
     )
 }
 

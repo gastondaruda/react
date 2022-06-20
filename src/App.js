@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import  CartContextProvider  from './Context/CartContext'
 import Navbar from './components/Navbar/navBar.jsx';
+import Navbar2 from './components/Navbar/Navbar';
 import ItemListContainer from './components/container/ItemListContainer';
 import ItemDetailContianer from './components/container/ItemDetailContainer';
 import ShopCart from './components/Cart/ShopCart';
@@ -18,17 +19,18 @@ function App() {
     <BrowserRouter>
       <CartContextProvider>
         <div className="App">
-          <Navbar />
+          
+          <Navbar2 />
             <Routes>
+              <Route path="/cart" element={<ShopCart/> }  />
               <Route path="/react" element={<ItemListContainer titulo='Soy itemListContainer' />}/>
               <Route path="/category/:id" element={<ItemListContainer />}/>              
               <Route path="/detail/:id" element={<ItemDetailContianer />} />
-              <Route path="/cart" element={<ShopCart/> }  />
               <Route path="/payment" element={<Payment />} />
               <Route path="/*" element={<Navigate to="/react" />} />
             </Routes>
+          <Footer />
         </div>
-      <Footer />
       </CartContextProvider>
     </BrowserRouter>
   );
